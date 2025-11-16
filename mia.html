@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: none;
+        }
+        body {
+            background: linear-gradient(135deg, #b3c7f7, #d8b4fe);
+            min-height: 100vh;
+        }
+        .header-img {
+            display:flex;
+            justify-content: center;
+        }
+        img{
+            border: solid 4px blue;
+            margin-top:20px;
+            border-radius:50%;
+        }
+        .header-h3 {
+            text-align: center;
+            margin-top:10px;
+            font-size: 30px;
+            color:black;
+        }
+        .header-h3 p {
+            margin-top:5px;
+            font-size:18px;
+            font-weight: lighter;
+        }
+        .birthday {
+            height:100px;
+            width:500px;
+            background-color: #dce1e6;
+            margin-left:520px;
+            margin-top:30px;
+            border-radius: 100px;
+        }
+        .birthday p {
+            background:none;
+            margin-left:60px;
+            position:relative;
+            top: 20px;
+            font-size:17px;
+        }
+        .birthday i {
+            width:60px;
+            height:60px;
+            background: #e0e7ff;
+            color: #4f46e5;
+            border-radius: 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .birthday .span1 {
+            position:absolute;
+            font-size:20px;
+            font-weight:500;
+            background: none;
+            margin-left:140px;
+            margin-top:-40px;
+        }
+        .birthday .span2 {
+            position:absolute;
+            font-size:18px;
+            font-weight:350;
+            background: none;
+            margin-left:140px;
+            margin-top:-10px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center ;
+            gap:15px;
+            margin-top:20px;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0e7ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4f46e5;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: #4f46e5;
+            color: white;
+            transform: translateY(-3px);
+        }
+        @media (max-width: 480px) {
+    .birthday {
+        width: 90%;
+        margin: 20px auto;     
+        height: auto;           
+        padding: 15px;
+    }
+
+    .birthday p {
+        margin-left: 10px;
+        top: 0;
+    }
+
+    .span1, .span2 {
+        margin-left: 80px;
+        position: relative;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .birthday {
+        width: 80%;
+        margin: 25px auto;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .birthday {
+        width: 60%;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 1201px) {
+    .birthday {
+        width: 500px;          
+        margin: 30px auto;     
+    }
+
+    img {
+        width: 180px;
+        height: 180px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-img">
+            <img src="https://randomuser.me/api/portraits/women/81.jpg">
+        </div>
+        <div class="header-h3">
+            <h3>Mia Moretti</h3>
+            <p>Foodie</p>
+        </div>
+        <div class="birthday">
+            <div class="icon"></div>
+            <p><i class="fas fa-birthday-cake"></i></p>
+            <span class="span1">Age</span>
+            <span class="span2">27 years</span> 
+        </div>
+        <div class="birthday">
+            <div class="icon"></div>
+            <p><i class="fas fa-palette"></i></p>
+            <span class="span1">Hobbies</span>
+            <span class="span2">Hiking, Foodie</span> 
+        </div>
+        <div class="birthday">
+            <div class="icon"></div>
+            <p><i class="fas fa-map-marker-alt"></i></p>
+            <span class="span1">Location</span>
+            <span class="span2">New York, USA</span> 
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </div>
+</body>
+</html>

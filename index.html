@@ -1,0 +1,643 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background-image: url("pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png");
+                background-repeat: no-repeat;
+                background-size: contain; 
+                background-position: center top;
+                background-attachment: fixed;
+                background-color: #fcdce6; 
+            }
+            * {
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .brand-logo {
+                font-size: 2.5rem;
+                text-align: center;
+                padding-top:15px;
+            }
+            .header {
+                height:120px;
+                background-color: #ff4f81;
+                color:white;
+            }
+            .header-p{
+                text-align:center;
+                font-size: 16px;
+                font-weight: light;
+                padding-top:1px;
+            }
+            nav {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding:20px 0;
+                text-align:center;
+            }
+            nav a {
+                text-decoration: none;
+                color:#ff4f81;
+                font-weight:bold;
+                margin:0 15px;
+                position:relative;
+            }
+            .nav-link:hover {
+                color:#ff4f81;
+                transition:1s;
+            }
+            .nav-link::after {
+                content :"";
+                position:absolute;
+                left:0;
+                bottom:-5px;
+                width:0%;
+                height:5px;
+                background-color: #ff4f81;
+                transition:width 0.3s ease;
+            }
+            .nav-link:hover::after {
+                width:100%;
+            }
+            .hero h1 {
+                text-align: center;
+                padding-top:60px;
+                font-size: 35px;
+            }
+            .hero {
+                min-height:250px;
+                background-color: #ffE4Ec;
+            }
+            p {
+                text-align: center;
+                padding-top:16px;
+
+            }
+            .hero button {
+                margin-top:20px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                display: block;
+                margin: 20px auto;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .section {
+                min-height:300px;
+                background-color: #fcdce6;
+                padding:40px 30px;
+            }
+            .section h3 {
+                color:#ff4f81;
+                text-align: center;
+                font-size:30px;
+            }
+            .features {
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap:30px;
+                margin-top:20px;
+            }
+            .features-box {
+                background-color: white;
+                border-radius: 10px;
+                padding:20px;
+                width:300px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                text-align: center;
+                overflow: hidden;
+            }
+            .features-box a {
+                text-decoration:none;
+                color:black;
+            }
+            .features-box-a:hover{
+                color:white;
+            }
+            .features-box:hover {
+                background-color:#ff4f81;
+                color:white;
+                transition: 0.3s ;
+                transform: translateY(-10px);
+            }
+            .hero2 {
+                min-height:300px;
+                background-color: #f3c7f3;
+                padding-top:40px;
+            }
+            .hero2 h2{
+                padding-top:10px;
+                font-size: 2.2rem;
+                padding-top:30px;
+                text-align: center;
+            }
+            .hero2 button {
+                margin-top:40px;
+                padding:8px 16px;
+                border-radius:20px;
+                padding-bottom:8px;
+                font-size:1.2rem;
+                color:white;
+                background-color:#ff4f81 ;
+                border:none;
+                text-align: center;
+                margin: 20px auto;
+                display: block;
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            footer {
+                background-color: #ff4f81;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                margin-top: 0px;
+            }
+            @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero button,
+            .hero2 button {
+                display: block;
+                margin: 20px auto;
+            }
+
+            .section {
+                height: auto;
+                padding: 30px 15px;
+            }
+
+            .features-box {
+                width: 90%;
+            }
+            .brand-logo {
+                font-size: 1.5rem;
+            }
+
+            .header-p {
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+                padding-top: 30px;
+            }
+
+            .hero2 h2 {
+                font-size: 1.5rem;
+            }
+        }
+            .contact {
+                background-color: #fcdce6;
+                padding-top: 10px;
+                padding-bottom:30px;
+                text-align: center;
+            }
+            .contact {
+                background-color: #fcdce6;
+                padding:10px 40px;
+                text-align:center;
+            }
+            .contact-heading1 {
+                margin-top:20px;
+                font-size:2.5rem;
+                color:#ff4f81;
+                margin-bottom:60px;
+            }
+            .contact-form{
+                max-width:500px;
+                display:flex;
+                margin:auto;
+                flex-direction: column;
+                gap:15px;
+            }
+            .contact-form input {
+                padding:12px;
+                border:1px solid #ccc;
+                border-radius:9px;
+                font-size:1rem;
+                resize:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+            }
+            .contact-button {
+                border-radius:25px;
+                padding:12px;
+                background-color: #ff4f81;
+                color:white;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                margin-bottom:40px;
+            }
+            .contact-form button:hover {
+                background-color: #e04070;
+                 transition :0.3s ease;
+            }
+            .contact-form textarea {
+                border-radius:25px;
+                padding:25px;
+                background-color: white;
+                color:black;
+                border:none;
+                box-shadow: 0 0 10px rgba(0,0,0,0.9);
+                cursor:pointer;
+                padding: 32px;
+                resize :vertical;
+            }
+            .logo-icon {
+                height: 50px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }   
+            .hero,
+            .section,
+            .hero2,
+            .contact {
+                background-color: rgba(252, 220, 230, 0.6);
+            }
+            hr {
+                height: 3px;          
+                background-color: #ff4f81; 
+                border: none;         
+            }
+            .hr-special {
+                height:5px;
+                background-color: #e04070;
+                width:50%;
+                align-items: center;
+                display: block;
+                margin:0 auto;
+            }
+            .join-btn12 {
+            display: block;
+            padding: 11px 30px;
+            background-color: #ff4f81;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 20px auto;
+            transition:  all 0.3s ease;
+            cursor: pointer;
+            width: fit-content;
+        }
+        
+        .join-btn12:hover {
+            background-color: #e04070;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+        }
+        .hero2 img {
+            width:400px;
+            height:200px;
+            margin:15px;
+            border-radius:10px;
+            margin-left:250px;
+            margin-top:40px;
+        }
+        .hero2 img:hover {
+            transform: translateY(-5px);
+        }
+        .hero2-special {
+            margin-top:10px;
+            color:#e04070;
+            font-weight:bold;
+            font-size:18px;
+        }
+        select {
+            background-color: transparent;
+            color:#ff4f81;
+            font-weight: bolder;
+            border:none;
+        }
+        .hero2 h2 {
+            color:#e04070;
+            text-decoration:underline;
+            margin:auto
+        }
+        .hero2 p {
+            text-align:center;
+            margin-left:200px;
+            margin-right:200px;
+            font-size:1.2rem;
+            color:black;
+            font-weight: bolder;
+        }
+
+        .hero2 img {
+            display:block;
+            margin-bottom: -100px;
+            margin:0 auto;
+            max-width:100%;
+            height:auto;        
+        }
+        
+        img, video, iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        section, div, header, footer {
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            p, a, li, button { font-size: 1rem; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.2rem; }
+            p, a, li, button { font-size: 0.9rem; }
+        }
+
+        </style>
+    </head>
+    <body>
+        <header class ="header">
+            <h1 class="brand-logo">
+                <img src = "pngtree-inspired-couple-logo-illustrations-vector-png-image_15635585.png" class = "logo-icon">
+                Surfer
+            </h1>
+            <p class="header-p">Find Real Conection, Not Just Matches </p>
+        </header>
+        <nav>
+            <a href = "#home" class = "nav-link">Home </a>
+            <a href = "#about" class = "nav-link">About</a>
+            <a href = "#browse" class = "nav-link">Browse</a>
+            <form method="get" target="_blank">
+                <select name="page" onchange="window.open(this.value, '_blank')">
+                    <option value="guidelines.html">Community Guidelines</option>
+                    <option value="safety.html">Safety Tips</option>
+                    <option value="safety&policy.html">Safety & Policy</option>
+                    <option value="safety&reporting.html">Safety & Reporting</option>
+                    <option value="security.html">Security</option>
+                </select>
+            </form>
+            <a href = "#ratings" class = "nav-link">Ratings</a>
+            <a href = "#review" class = "nav-link">Review</a>
+            <a href = "#join" class = "nav-link">Join Us</a>
+            <a href="" class="nav-link">Explore</a>
+        </nav>
+        <div class="hero">
+            <h1>Your Love Story Begins Here ❤️</h1>
+            <p>Joins Thousands Of Singles Looking For Love and Meaningful Relationships to spend life with one another.</p>
+            <button>Sign Up for Free</button>
+            <br>
+            <br>
+            <hr class="hr-special">
+            </div>
+
+        <div class="section" id = "about">
+            <h3>Why Choose Surfer! 🤔</h3>
+            <div class="features" id = "about">
+                <div class="features-box">
+                    <h4>Smart Matches 👍</h4>
+                    <p>We connect you with people who truly match your values and interests.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Safe & Secure 🛡️</h4>
+                    <p>Your privacy matters. We protect your data with strong security.</p>
+                </div>
+                <div class="features-box">
+                    <h4>Real People 🫂</h4>
+                    <p>Every profile is reviewed to ensure a real and safe dating experience.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3>How It Works 📱</h3>
+            <div class="features">
+                <div class="features-box">
+                    <h4>1. Create Profile 🤳</h4>
+                    <p>Tell us about yourself. It’s quick and easy.</p>
+                </div>
+                <div class="features-box">
+                    <h4>2. Meet Matches 🤝</h4>
+                    <p>We’ll recommend people just for you.</p>
+                </div>
+                <div class="features-box">
+                    <h4>3. Start Chatting 🗣️</h4>
+                    <p>Connect through private, real-time messaging.</p>
+                </div>
+            </div>
+        </div>
+        <hr class="hr-special">
+        <div class="hero2" id="explore">
+            <h2>Explore Us</h2>
+            <br>
+            
+            <img src="data:image/jpeg;base64,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" alt="">
+            <p>--- Explore the Treasure !---</p>
+            <a href="explore.html" class="join-btn12" target ="_blank">Explore !</a>
+            <hr class="hr-special">
+        </div>
+        
+        <div class="section" id="browse">
+            <h3>Meet Some of Our Amazing Members 🌸</h3>
+            <div class="features">
+                <div class="features-box">
+                    <a href="jhonny.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jhonny" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Jhonny, 24</h4>
+                    <p>Nature lover, bookworm, and always up for deep conversations. 📚🌿</p>
+                </a>
+                </div>
+                <div class="features-box">
+                    <a href="mia.html" target="_blank" class="features-box-a">
+                    <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Miya" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Miya, 27</h4>
+                    <p>Adventure seeker who loves hiking and great food. 🍜⛰️</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="leonaldo.html" target="_blank" class="features-box-a">
+                    <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Leonaldo" style="width:100%; border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Leonaldo, 22</h4>
+                    <p>Artist, coffee addict, and dreaming of a romantic soulmate. ☕🎨</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="grace.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/women/66.jpg"alt = "Grace" style = "width:100%; display:block;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Grace, 23</h4>
+                    <p>Doctor, booklover, and dreaming of her forever person. 📖💖</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="ram.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Ram" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Ram, 25</h4>
+                    <p>Software engineer who codes by day and paints by night. 👩‍💻🎨</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="sita.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Sita"  style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Sita, 25</h4>
+                    <p>Yoga enthusiast and lover of peaceful mornings with coffee. ☕🧘‍♀️</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="harry.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Harry" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Harry, 26</h4>
+                    <p>Architect, traveler, and always ready to dance in the rain. ✈️🌧️</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="siya.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Siya" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Siya, 22</h4>
+                    <p>College student, cat mom, and aspiring poet. 🐱✍️</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="henry.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Henry"  style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Henry, 24</h4>
+                    <p>Photographer capturing life's little moments. 📸🌸</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="nuancy.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Nuancy" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" >
+                    <h4>Nuancy, 21</h4>
+                    <p>Student nurse with a big heart and even bigger dreams. ❤️🏥</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="rohan.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Rohan" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Rohan,29</h4>
+                    <p>Music teacher who lives for harmony and connection. 🎶🤝</p>
+                    </a>
+                </div>
+                <div class="features-box">
+                    <a href="linda.html" class="features-box-a" target="_blank">
+                    <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Linda" style = "width:100%;border-radius:10px; box-shadow: 0 0 10px rgba(0,0,0,0.5);">
+                    <h4>Linda,27</h4>
+                    <p>Chef by passion, foodie forever — let's cook something real. 🍽️🔥</p>
+                    </a>
+                </div>
+                <hr class="hr-special">
+           </div>
+           <div class="section" id="ratings">
+                <h3>What Our Users Say 💬</h3>
+                <div class="features">
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Jhonny" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Jhonny ❤️</h4>
+                        <p>Surfer gave me more than just matches — it gave me the belief that love still exists in the most unexpected places 💫. I met people who truly understood me in ways I never imagined 🤝. Conversations grew into real connections that made my life brighter 🌅. For that, I’ll always be grateful 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/81.jpg" alt="Mia" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Mia 💕</h4>
+                        <p>Before Surfer, I thought online love was just a fantasy 🌙. But here, I found someone who makes my mornings brighter 🌞 and my nights warmer 🌌. Every swipe brought me closer to someone who truly values me 💖. This journey has been life-changing 🙌.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Leonaldo" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Leonaldo  💌</h4>
+                        <p>Surfer opened doors I never thought I’d walk through 🚪. I met people who brought joy 😂 and meaning to my days 🌟. Among them, I found someone who makes my world complete 💍. This app didn’t just help me meet someone — it helped me find happiness 😊.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/66.jpg" alt="Grace" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Grace 🌸</h4>
+                        <p>What started as a simple chat on Surfer turned into one of the most beautiful journeys of my life ✨. I met someone who feels like home 🏡 in every way. We dream 💭, laugh 😄, and support each other 💪. Thank you for making love so real ❤️.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Ram" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Ram 🙏</h4>
+                        <p>I was searching for someone who truly understood my heart 💓. Surfer brought me love ❤️, friendship 🤗, and companionship. Every day feels like a blessing since I met my partner 🌞. I will always appreciate this platform 🌍.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/82.jpg" alt="Sita" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Sita 💖</h4>
+                        <p>Surfer made finding love feel natural and effortless 🌿. It introduced me to someone who truly values 💎 and understands me, and who makes every moment feel special 🎉. My life feels brighter 🌟, happier 😊, and more complete 💍. Thank you for being the reason I found my forever 💕.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Harry" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Harry 😍</h4>
+                        <p>When I joined Surfer, I didn’t expect much — maybe just a few friendly chats 💬. But what I found here was nothing short of magical ✨. I met someone who makes me feel alive ⚡, inspired 🌈, and deeply loved ❤️. This app changed my story in the best way possible 📖.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/72.jpg" alt="Siya" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Siya 🌹</h4>
+                        <p>For the longest time, love felt like a dream that was too far to reach 🌙. Surfer brought it closer than ever 🚀, introducing me to someone who makes each day worth living 💓. Now, my life is filled with joy 🎉, laughter 😂, and endless memories 📸. I’ll always be thankful for that 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/57.jpg" alt="Henry" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Henry 🌟</h4>
+                        <p>Surfer transformed strangers into friends 🤝 and friends into soulmates 💍. It gave me a safe space to be myself 🌈 and to find someone who appreciates me just as I am 💗. Every message, every meeting, led me to something beautiful 🌹. I can never thank you enough for that 🙌.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/67.jpg" alt="Nuancy" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Nuancy 💞</h4>
+                        <p>To me, Surfer is more than just a dating app 💌 — it’s the place where my life changed forever 🌅. I met someone who makes my heart feel full 💖 and my days feel brighter 🌞. This journey has been unforgettable 🛤, and I owe it all to this platform 🌍. Thank you endlessly 🙏.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/men/79.jpg" alt="Rohan" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Rohan 💓</h4>
+                        <p>From the very first hello 👋 to the dreams we now share 🌠, Surfer has been the bridge 🌉 that brought us together. I found someone who understands me in ways I never thought possible 💬. My life feels richer 💎 and more complete 💍, and I couldn’t be more grateful ❤️.</p>
+                    </div>
+                    <div class="features-box">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Linda" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 10px;">
+                        <h4>Linda 🌼</h4>
+                        <p>I never imagined I would meet both my best friend 👭 and my soulmate 💍 in one place, but Surfer made it happen 🌟. It brought me love that is genuine 💗, pure 🌿, and full of happiness 😄. This platform has changed my life in ways I will treasure forever 📖. Thank you for everything 🙏.</p>
+                   </div>
+            </div>
+        </div>
+        <br>
+        <hr class="hr-special">
+        </div>
+        <div class="contact" id="review">
+            <h2 class="contact-heading1">Your Review 📪</h2    >
+            <form class="contact-form">
+                <input type="text" placeholder = "Your First Name..." required>
+                <input type="text" placeholder = "Your Last Name..." required>
+                <textarea row ="row" placeholder = "Your Message"></textarea>
+                <button class = "contact-button">Send</button>
+            </form>
+        </div>
+        <hr class="hr-special">
+        
+        <div class="hero2" id="join">
+            <h2>Ready To Find Love? 🫷🫸</h2>
+            <p>Create your profile today and start connecting with amazing people near you.</p>
+            <a href="signin.html" class="join-btn12" target="_blank">Join Now</a>
+        </div>
+        <footer>
+            &copy; 2025 Surfer | All Rights Reserved | Privacy Policy | Terms of Use
+            &copy;
+        </footer>
+    </body>
+    </html>
